@@ -1,0 +1,22 @@
+IDI_ICON1               ICON    DISCARDABLE     "default.ico"
+1 VERSIONINFO
+    FILEVERSION    1,0,0,0
+    PRODUCTVERSION 1,0,0,0
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "000004B0"
+        {
+            VALUE "CompanyName",        "Stestrup Old\0"
+            VALUE "FileDescription",    "txt2tmpl\0"
+            VALUE "FileVersion",        "git\0"
+            VALUE "OriginalFilename",   "txt2tmpl.exe\0"
+            VALUE "ProductName",        "Template generator\0"
+            VALUE "ProductVersion",     "git\0"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0000, 0x04B0
+    }
+}
