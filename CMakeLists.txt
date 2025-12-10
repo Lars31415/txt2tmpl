@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(txt2tmpl VERSION 0.1 LANGUAGES CXX)
+project(txt2tmpl VERSION 0.1 LANGUAGES CXX C)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -23,12 +23,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(txt2tmpl
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        ../../../../../Source/Sandbox/RaspberryPiPico/tinyjson/tinyjson.hpp
-        ../utils/file_utils.cpp
-        ../utils/file_utils.hpp
-        ../../../../../Source/Sandbox/RaspberryPiPico/utils/time_strings.cpp
-        ../../../../../Source/Sandbox/RaspberryPiPico/utils/time_strings.hpp
+        ../../tinyjson/tinyjson.hpp
+        ../../utils/file_utils.cpp
+        ../../utils/file_utils.hpp
+        ../../utils/time_strings.cpp
+        ../../utils/time_strings.hpp
         mainwindow.rc
+        ../../zlib/adler32.c ../../zlib/compress.c ../../zlib/crc32.c ../../zlib/deflate.c ../../zlib/gzclose.c ../../zlib/gzlib.c ../../zlib/gzread.c ../../zlib/gzwrite.c ../../zlib/infback.c ../../zlib/inffast.c ../../zlib/inflate.c ../../zlib/inftrees.c ../../zlib/trees.c ../../zlib/uncompr.c ../../zlib/zutil.c
+        ../../zlib/crc32.h ../../zlib/deflate.h ../../zlib/gzguts.h ../../zlib/inffast.h ../../zlib/inffixed.h ../../zlib/inflate.h ../../zlib/inftrees.h ../../zlib/trees.h ../../zlib/zconf.h ../../zlib/zlib.h ../../zlib/zutil.h
+        ../../Utils/gzip_it.cpp ../../Utils/gzip_it.hpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET txt2tmpl APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -49,9 +52,8 @@ else()
 endif()
 
 target_include_directories(txt2tmpl PRIVATE
-../../../../../Source/Sandbox/RaspberryPiPico/tinyjson
-../utils
-../../../../../Source/Sandbox/RaspberryPiPico/utils
+../../tinyjson
+../../utils
 )
 
 target_link_libraries(txt2tmpl PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

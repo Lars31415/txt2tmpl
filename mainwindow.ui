@@ -153,6 +153,32 @@
      <string>Clear</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_Const">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>180</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mark Const</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_zip">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>210</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mark Zipped</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
